@@ -1,0 +1,80 @@
+#0-add_integer.txt
+
+===============================
+    Tests using Add Integer
+===============================
+
+This function adds 2 integers or floats
+	
+    Paramethers:
+        a (float, int): The first value
+        b (float, int): The second value. Defaults to 98.
+    Errors:
+        TypeError: if a is not a float or an int
+        TypeError: if b is not a float or an int
+    Returns:
+        Integer with the addition of a and b
+
+	Import `add_integer` from the file `0-add_integer.py`:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+===============================
+
+Numbers
+=======
+
+Two positive integers:
+    >>> add_integer(50,15)
+    65
+
+One negative integer (b):
+    >>> add_integer(23, -12)
+    11
+
+One negative integer (a):
+    >>> add_integer(-33, 9)
+    -24
+
+Two negative integers:
+    >>> add_integer(-4, -7)
+    -11
+
+Two positive floats:
+    >>> add_integer(11.345, 45.65)
+    25
+
+Two negative floats:
+    >>> add_integer(-9.76, -23.65)
+    -32
+
+One complex:
+    >>> add_integer(3j, 3.14)
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
+
+One integer (paramether):
+    >>> add_integer(1)
+    99
+
+
+Non Numbers
+===============================
+
+One string (a):
+    >>> add_integer("love", 23)
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
+
+One bool (b):
+    >>> add_integer(69, True)
+    Traceback (most recent call last):
+      ...
+    TypeError: b must be an integer
+
+Without paramether:
+    >>> add_integer()
+    Traceback (most recent call last):
+      ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
