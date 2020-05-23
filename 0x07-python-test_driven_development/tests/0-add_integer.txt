@@ -41,7 +41,7 @@ Two negative integers:
 
 Two positive floats:
     >>> add_integer(11.345, 45.65)
-    25
+    56
 
 Two negative floats:
     >>> add_integer(-9.76, -23.65)
@@ -62,7 +62,7 @@ Non Numbers
 ===============================
 
 One string (a):
-    >>> add_integer("love", 23)
+    >>> add_integer("doom", 23)
     Traceback (most recent call last):
       ...
     TypeError: a must be an integer
