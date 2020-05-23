@@ -78,3 +78,21 @@ Without paramether:
     Traceback (most recent call last):
       ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Infinity paramether:
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	  ...
+	TypeError: b must be an integer
+
+Non a Number (NaN) paramether:
+	>>> add_integer(2, float('NaN'))
+	Traceback (most recent call last):
+	  ...
+	TypeError: b must be an integer
+
+Negative Infinity paramether:
+	>>> add_integer(float('-inf'), 5)
+	Traceback (most recent call last):
+	  ...
+	OverflowError: cannot convert float infinity to integer
