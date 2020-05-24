@@ -12,7 +12,7 @@ def matrix_divided(matrix, div):
         div: number that divide all elements of a matrix
     Errors:
         TypeError: if matrix is not list
-        TypeError: if the elements of the matrix are not 
+        TypeError: if the elements of the matrix are not
         a list
         TypeError: if any elements of the matrix is not
         a integer or float
