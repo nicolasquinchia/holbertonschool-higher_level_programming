@@ -1,41 +1,52 @@
-#3-say_my_name.py
+#3-say_my_name
 
 ===============================
-       Tests Say my name
+    Tests using Print my name
 ===============================
 
-"""
-This function say hi printing My name is 
-    <first name> <last name>
-Paramethers:
-    first_name: String with the first name 
-    last_name: String with the last name by default empty
-Errors:
-    TypeError: first_name must be a string
-    TypeError: last_name must be a string
+Function that print a name with first and last name
+    Arguments:
+        first_name {[str]} -- First Name
+    Keyword Arguments:
+        last_name {str} -- Last Name  (default: {""})
+    Raises:
+        TypeError: first_name must be a string
+        TypeError: last_name must be a string
+    """
+    Import `say_my_name` from the file `3-say_my_name.py`:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Returns:
-No return value, prints some result
-"""
+    Numbers
+    =======
+    #1: First_name as integer:
+        >>> say_my_name(25, "Doom")
+        Traceback (most recent call last):
+          ...
+        TypeError: first_name must be a string
 
-Import `say_my_name` from the file `3-say_my_name.py`:
->>> say_my_name = __import__('3-say_my_name').say_my_name
+    #2: last_name as integer:
+        >>> say_my_name("Slayer", 2)
+        Traceback (most recent call last):
+          ...
+        TypeError: last_name must be a string
 
-Numbers
-=======
+    Non - Numbers
+    ==========
 
-#1: first_name as integer:
+    #3: Strings in first_name and last_name:
+        >>> say_my_name("Monica", "Ortiz")
+        My name is Monica Ortiz
 
-#2: last_name as integer:
+    #4: Empty String in first_name:
+        >>> say_my_name("", "Ortiz")
+        My name is  Ortiz
 
+    #5: Empty String in last_name:
+        >>> say_my_name("Monica", "")
+        My name is Monica 
 
-Non - Numbers
-=============
-
-#3: Strings in first_name and last_name:
-
-#4: last_name without Paramethers:
-
-#5: function call without Paramethers:
-
-#6: Empty String in first_name:
+    #6: Function without Paramethers:
+        >>> say_my_name()
+        Traceback (most recent call last):
+          ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
