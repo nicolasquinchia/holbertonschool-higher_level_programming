@@ -1,0 +1,41 @@
+#3-say_my_name.py
+
+===============================
+       Tests Say my name
+===============================
+
+"""
+This function say hi printing My name is 
+    <first name> <last name>
+Paramethers:
+    first_name: String with the first name 
+    last_name: String with the last name by default empty
+Errors:
+    TypeError: first_name must be a string
+    TypeError: last_name must be a string
+
+Returns:
+No return value, prints some result
+"""
+
+Import `say_my_name` from the file `3-say_my_name.py`:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Numbers
+=======
+
+#1: first_name as integer:
+
+#2: last_name as integer:
+
+
+Non - Numbers
+=============
+
+#3: Strings in first_name and last_name:
+
+#4: last_name without Paramethers:
+
+#5: function call without Paramethers:
+
+#6: Empty String in first_name:
