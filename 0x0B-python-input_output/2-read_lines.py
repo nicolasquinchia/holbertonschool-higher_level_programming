@@ -23,4 +23,4 @@ def read_lines(filename="", nb_lines=0):
             in_file.seek(0)
             for line in range(nb_lines):
                 n = in_file.readline()
-                print(n)
+                print(n, end="")
