@@ -1,0 +1,103 @@
+#7-base_geometry
+
+====================================
+    Tests using integer validator
+====================================
+
+Public instance method, that check value
+
+    Arguments:
+        name {[str]} -- instance name
+        value {[int]} -- instance value
+
+    Raises:
+        TypeError: value must be an integer
+        ValueError: value must be greater than 0
+
+    Import `BaseGeometry` from the file `7-base_geometry.py`:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+====================================
+
+>>> bg = BaseGeometry()
+
+#1: Check correct output
+    >>> bg. integer_validator("Doom", 23)
+
+#2: Value is a string
+    >>> bg. integer_validator("Doom", "Hell")
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#3: Value is less zero
+    >>> bg. integer_validator("Doom", -5)
+    Traceback (most recent call last):
+      ...
+    ValueError: Doom must be greater than 0
+
+#4: Value is zero
+    >>> bg. integer_validator("Doom", 0)
+    Traceback (most recent call last):
+      ...
+    ValueError: Doom must be greater than 0
+
+#5: Value is infinite
+    >>> bg. integer_validator("Doom", float('inf'))
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#6: Value is Nan
+    >>> bg. integer_validator("Doom", float('NaN'))
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#7: Value is a list
+    >>> bg. integer_validator("Doom", [1, 2, 3, 4, 5])
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#8: Just one paramether
+    >>> bg. integer_validator("Doom")
+    Traceback (most recent call last):
+      ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+#9: Without paramethers
+    >>> bg. integer_validator()
+    Traceback (most recent call last):
+      ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+#10: Test area method
+    >>> bg.area()
+    Traceback (most recent call last):
+      ...
+    Exception: area() is not implemented
+
+#11: Value is bool
+    >>> bg. integer_validator("Doom", True)
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#12: Value is a tuple
+    >>> bg. integer_validator("Doom", (6, 7, 8, 9))
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#13: Value is None
+    >>> bg. integer_validator("Doom", None)
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
+
+#14: Value is a set
+    >>> bg. integer_validator("Doom", {0,1,2,3,4,5,6,7,8,9})
+    Traceback (most recent call last):
+      ...
+    TypeError: Doom must be an integer
