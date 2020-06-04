@@ -6,7 +6,7 @@ import json
 
 
 def class_to_json(obj):
-    """funtion that returns the dict description with simple data structure 
+    """funtion that returns the dict description with simple data structure
 
     Arguments:
         obj {[obj]} -- Object to convert into a data structure
