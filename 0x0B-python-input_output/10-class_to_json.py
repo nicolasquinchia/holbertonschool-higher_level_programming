@@ -2,7 +2,6 @@
 """This module returns a object
     as a dict.
     """
-import json
 
 
 def class_to_json(obj):
