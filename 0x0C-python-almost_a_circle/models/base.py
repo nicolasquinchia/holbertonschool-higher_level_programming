@@ -47,7 +47,7 @@ class Base:
         if list_objs:
             n_list = [items.to_dictionary() for items in list_objs]
         else:
-            n_list = "[]"
+            n_list = []
         file_name = "{}.json".format(cls.__name__)
         with open(file_name, "w") as work_file:
             work_file.write(Base.to_json_string(n_list))
