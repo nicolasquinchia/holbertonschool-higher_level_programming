@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from sys import argv
-import requests
 """Check github commits, by repo and user
     """
+from sys import argv
+import requests
 
 if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
