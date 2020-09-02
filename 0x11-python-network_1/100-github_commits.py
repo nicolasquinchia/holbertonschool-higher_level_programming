@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 from sys import argv
 import requests
 """Check github commits, by repo and user
