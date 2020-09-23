@@ -8,8 +8,8 @@ request(requestUrl, function (error, response, body) {
     console.error(error);
   }
   const toObj = JSON.parse(body);
-  for (let i = 0; toObj.results[i]; i++) {
-    if (toObj.results[i].characters.includes(characUrl)) {
+  for (const movie of toObj.results) {
+    if (movie.characters.includes(characUrl)) {
       movies++;
     }
   }
