@@ -7,8 +7,7 @@ request(requestUrl, function (error, response, body) {
   if (error) {
     console.error(error);
   }
-  const toObj = JSON.parse(body);
-  for (const movie of toObj.results) {
+  for (const movie of JSON.parse(body).results) {
     if (movie.characters.includes(characUrl)) {
       movies++;
     }
